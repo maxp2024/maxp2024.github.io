@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .welcome-message {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+            max-width: 600px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            max-width: 200px;
+            max-height: 150px;
+            object-fit: contain;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            border-color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World! 🚀</h1>
-    <p>My first GitHub Pages website!</p>
+    <h1>Photo Gallery</h1>
+    <p class="welcome-message">Welcome to my gallery! Enjoy browsing through a collection of inspiring moments captured in these photos.</p>
+    <div class="gallery">
+        <!-- Add your images here -->
+        <img src="images/im1.png" alt="Photo 1">
+        <img src="images/im2.png" alt="Photo 2">
+        <img src="images/im3.JPG" alt="Photo 3">
+        <img src="images/im4.JPG" alt="Photo 4">
+        <img src="images/im5.JPG" alt="Photo 5">
+        <img src="images/im6.JPG" alt="Photo 6">
+    </div>
 </body>
 </html>
