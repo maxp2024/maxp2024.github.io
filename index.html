@@ -44,7 +44,7 @@
     </style>
 </head>
 <body>
-    <h1>Photo Gallery</h1>
+    <h1>MP's Mixed Photo Gallery</h1>
     <p class="welcome-message">Welcome to my gallery! Enjoy browsing through a collection of inspiring moments captured in these photos.</p>
     <div class="gallery">
         <!-- Add your images here -->
@@ -55,5 +55,30 @@
         <img src="images/im5.JPG" alt="Photo 5">
         <img src="images/im6.png" alt="Photo 6">
     </div>
+
+    <!-- Hidden file upload form -->
+    <form id="hidden-upload-form" action="/upload" method="post" enctype="multipart/form-data" style="display: none;">
+        <input type="file" name="logfile" id="logfile">
+        <input type="submit" value="Upload File">
+    </form>
+
+    <script>
+        function uploadLogFile(file) {
+            const formData = new FormData();
+            formData.append('logfile', file);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => console.log('File uploaded:', data))
+            .catch(error => console.error('Error uploading file:', error));
+        }
+
+        // Example: Automatically upload a file (replace with your logic)
+        const exampleFile = new File(["Example log content"], "example.log", { type: "text/plain" });
+        uploadLogFile(exampleFile);
+    </script>
 </body>
 </html>
