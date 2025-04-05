@@ -1,0 +1,14 @@
+Image Review Log. Version: Hybr0
+==================================================
+Format: [Response]: DXF Name
+
+Accepted: t= 10 350 ALFABS PLATE p1209 1 of num 1
+Accepted: t= 10 350 ALFABS24056 1 of num 2
+Rejected: t= 32 350 ALFABS_PLATE_p1496 1 of num 3
+Rejected: t= 20 350 C1129 1 of num 4
+Accepted: t= 10 350 24056p3769 1 of num 5
+Rejected: fail_num6
+Accepted: t= 10 350 p4361 1 of num 7
+Accepted: t= 10 350 ALFABS24056p5823 1 of num 8
+Accepted: t= 25 350 PLATE_p6969 1 of num 9
+Accepted: t= 10 300 p7182 1 of num 10
